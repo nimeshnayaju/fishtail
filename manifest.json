@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Fishtail",
+  "description": "Fishtail is a browser extension that turns your cursor into a laser pointer.",
+  "version": "0.0.1",
+  "action": { "default_popup": "index.html" },
+  "options_page": "options.html",
+  "content_scripts": [
+    {
+      "js": ["src/content/main.tsx"],
+      "matches": ["http://*/*", "https://*/*"]
+    }
+  ],
+  "permissions": ["storage"],
+  "icons": {
+    "16": "icons/favicon-16x16.png",
+    "32": "icons/favicon-32x32.png",
+    "128": "icons/favicon-128x128.png",
+    "192": "icons/favicon-192x192.png",
+    "512": "icons/favicon-512x512.png"
+  }
+}
