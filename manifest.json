@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Fishtail",
-  "description": "Fishtail is a browser extension that turns your cursor into a laser pointer.",
+  "description": "Fishtail is a browser extension that adds a tail to your cursor.",
   "version": "0.0.1",
   "action": { "default_popup": "index.html" },
   "options_page": "options.html",
@@ -11,6 +11,10 @@
       "matches": ["http://*/*", "https://*/*"]
     }
   ],
+  "background": {
+    "service_worker": "src/background/index.ts",
+    "type": "module"
+  },
   "permissions": ["storage"],
   "icons": {
     "16": "icons/favicon-16x16.png",

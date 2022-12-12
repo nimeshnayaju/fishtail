@@ -1,6 +1,6 @@
 import { RgbaColorPicker, type RgbaColor } from "react-colorful";
-import * as styles from "./App.css";
 import { useCallback, useEffect, useState } from "react";
+import * as styles from "./App.css";
 
 function App() {
   const [color, setColor] = useState<RgbaColor>();

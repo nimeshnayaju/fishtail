@@ -32,6 +32,7 @@ const App: FunctionComponent = () => {
         e.code === "AltLeft"
       ) {
         service.send("GROW");
+        e.preventDefault();
       }
     };
 
@@ -46,6 +47,7 @@ const App: FunctionComponent = () => {
     const onKeyUp = (e: KeyboardEvent) => {
       if (service.getSnapshot().matches("growing") && e.code === "AltLeft") {
         service.send("SHRINK");
+        e.preventDefault();
       }
     };
 
